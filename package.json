@@ -1,0 +1,33 @@
+{
+  "name": "passport-backend",
+  "version": "1.0.0",
+  "description": "node backend server",
+  "main": "index.js",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "chalk": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.5",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "client": "npm start --prefix ../passport-starter",
+    "client-install": "npm install --prefix ../passport-starter",
+    "dev": "concurrently --kill-others -n 'client,server' -c 'green,red' \"npm run start\" \"npm run client\" "
+  },
+  "author": "Me",
+  "license": "UNLICENSED"
+}
